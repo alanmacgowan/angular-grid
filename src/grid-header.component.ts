@@ -4,7 +4,16 @@ import { IGridColumn } from './IGridColumn';
 
 @Component({
   selector: 'grid-header',
-  templateUrl: 'grid-header.component.html'
+  template: `
+  <thead>
+  <tr>
+      <th *ngFor="let column of columns" class="grid-cell grid-header" >
+          <span (click)="sort(column.name)">{{column.title}} <span *ngIf="currentSort == column.name">&nbsp;<i [class]="sortClass"></i></span>
+          </span>
+      </th>
+  </tr>
+</thead>
+  `
 })
 export class GridHeaderComponent implements OnInit {
   @Input() columns: IGridColumn[] = [];

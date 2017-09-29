@@ -48,7 +48,7 @@ Finally use in one of your apps components:
 import { Component } from '@angular/core';
 
 @Component({
-  template: '<hello-world></hello-world>'
+  template: '<app-grid></app-grid>'
 })
 export class MyComponent {}
 ```

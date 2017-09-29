@@ -8,15 +8,36 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 
-import { IEntity } from '../IEntity';
+import { IEntity } from './IEntity';
 import { ISortResult } from './ISortResult';
 import { IGridColumn } from './IGridColumn';
 import { IGridRow } from './IGridRow';
 
 @Component({
   selector: 'app-grid',
-  templateUrl: 'grid.component.html',
-  styleUrls: ['grid.component.css'],
+  template: `
+    <div class="panel panel-green">
+    <div class="panel-heading">{{title}}</div>
+    <div class="panel-body">
+        <table *ngIf="rows" class="table table-hover">
+            <grid-header [columns]="columns" (onSort)="sort($event)"></grid-header>
+            <grid-row [items]="rows" (onItemEdit)="editItem($event)" (onItemDelete)="deleteItem($event)"></grid-row>
+        </table>
+        <grid-pagination [totalItems]="totalItems" [pageSize]="pageSize" (onPageChanged)="pageChange($event)"></grid-pagination>
+    </div>
+  </div>
+  `,
+  styles: [
+    `
+  .grid-cell {
+    padding: 8px;
+    width: 1%;
+}
+.grid-header{
+    cursor: pointer;
+    text-align: left;
+} `
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })

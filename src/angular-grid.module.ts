@@ -1,11 +1,25 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HelloWorldComponent } from './hello-world.component';
+
+import { PaginationComponent } from './grid-pagination.component';
+import { GridHeaderComponent } from './grid-header.component';
+import { GridRowComponent } from './grid-row.component';
+import { GridComponent } from './grid.component';
 
 @NgModule({
-  declarations: [HelloWorldComponent],
   imports: [CommonModule],
-  exports: [HelloWorldComponent]
+  exports: [
+    PaginationComponent,
+    GridHeaderComponent,
+    GridRowComponent,
+    GridComponent
+  ],
+  declarations: [
+    PaginationComponent,
+    GridHeaderComponent,
+    GridRowComponent,
+    GridComponent
+  ]
 })
 export class AngularGridModule {
   static forRoot(): ModuleWithProviders {

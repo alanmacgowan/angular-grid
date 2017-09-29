@@ -2,8 +2,37 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'grid-pagination',
-  templateUrl: 'grid-pagination.component.html',
-  styleUrls: ['grid-pagination.component.css']
+  template: `
+  <nav [hidden]="!isVisible">
+  <ul class="pagination">
+    <li [class.disabled]="!previousEnabled" (click)="previousNext(-1, $event)">
+      <a aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li *ngFor="let page of pages" (click)="changePage(page, $event)" [class.active]="currentPage === page">
+      <a>{{ page }}</a>
+    </li>
+    <li [class.disabled]="!nextEnabled" (click)="previousNext(1, $event)">
+      <a aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+  `,
+  styles: [
+    `
+  .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #027FF4;
+    border-color: #027FF4;
+  }
+  
+  .pagination a {
+      cursor: pointer;
+  }
+  `
+  ]
 })
 export class PaginationComponent implements OnInit {
   private pagerTotalItems: number;

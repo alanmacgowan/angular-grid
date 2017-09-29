@@ -1,4 +1,4 @@
 export interface ISortResult {
-  column: String;
+  column: string;
   order: number;
 }
