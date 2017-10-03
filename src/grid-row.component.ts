@@ -11,7 +11,6 @@ import { IGridRow } from './IGridRow';
           <ng-template [ngIf]="col.type == 'ACTIONS'">
               <button type="button" (click)="editItem(item.entity, $event)" class="btn btn-primary btn-sm" data-hover="tooltip" title="Edit"><i class="fa fa-pencil"></i></button>
               <button type="button" (click)="deleteItem(item.entity)" class="btn btn-danger btn-sm" data-hover="tooltip" title="Delete"><i class="fa fa-trash-o"></i></button>
-              <button type="button" class="btn btn-blue btn-sm" data-hover="tooltip" title="Download"><i class="fa fa-download"></i></button>
           </ng-template>
           <ng-template [ngIf]="col.type == 'DATE'">
               {{col.value | date: 'dd/MM/yyyy'}}
