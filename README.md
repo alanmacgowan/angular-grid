@@ -1,4 +1,4 @@
-# angular grid
+# angular grid [WIP]
 [![Build Status](https://travis-ci.org/alanmacgowan/angular-grid.svg?branch=master)](https://travis-ci.org/alanmacgowan/angular-grid)
 [![codecov](https://codecov.io/gh/alanmacgowan/angular-grid/branch/master/graph/badge.svg)](https://codecov.io/gh/alanmacgowan/angular-grid)
 [![npm version](https://badge.fury.io/js/angular-grid.svg)](http://badge.fury.io/js/angular-grid)
