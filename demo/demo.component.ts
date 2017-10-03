@@ -34,17 +34,29 @@ export class DemoComponent implements OnInit {
 
   getBooksPaged(page: number, sort?: string, order?: number) {
     this.rows = [];
-    this.totalRecords = 1;
-    this.rows.push({
-      entity: new Book('1'),
-      columns: [
-        { type: 'ACTIONS', value: '' },
-        { value: 'title' },
-        { type: 'DATE', value: new Date() },
-        { value: 'authors' },
-        { type: 'CUSTOM', value: 'category' }
-      ]
-    });
+    this.totalRecords = 2;
+    this.rows.push(
+      {
+        entity: new Book('1'),
+        columns: [
+          { type: 'ACTIONS', value: '' },
+          { value: 'Book 1' },
+          { type: 'DATE', value: new Date() },
+          { value: 'Alan Mac' },
+          { type: 'CUSTOM', value: 'Comedy' }
+        ]
+      },
+      {
+        entity: new Book('2'),
+        columns: [
+          { type: 'ACTIONS', value: '' },
+          { value: 'Book 2' },
+          { type: 'DATE', value: new Date() },
+          { value: 'John Perez' },
+          { type: 'CUSTOM', value: 'Drama' }
+        ]
+      }
+    );
   }
 
   sort(sort: ISortResult) {

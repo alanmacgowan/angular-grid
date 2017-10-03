@@ -19,11 +19,11 @@ export class GridHeaderComponent implements OnInit {
   @Input() columns: IGridColumn[] = [];
   @Output() onSort: EventEmitter<ISortResult> = new EventEmitter();
 
-  currentSort: String;
+  currentSort: string;
   currentSortOrder: number = 1;
-  sortClass: String = 'fa fa-sort-desc';
+  sortClass: string = 'fa fa-sort-desc';
 
-  sort(column: String, event?: MouseEvent) {
+  sort(column: string, event?: MouseEvent) {
     if (event) {
       event.preventDefault();
     }
