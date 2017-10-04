@@ -58,10 +58,10 @@ export default (environment = 'development') => {
       new webpack.DefinePlugin({
         ENV: JSON.stringify(environment)
       }),
-      ifDevelopment(new CopyWebpackPlugin([{
+     new CopyWebpackPlugin([{
         from: './demo/books.json',
         to: '.'
-    }])),
+    }]),
       ifProduction(new webpack.optimize.UglifyJsPlugin({
         sourceMap: true
       })),
