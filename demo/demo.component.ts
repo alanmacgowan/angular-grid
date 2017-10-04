@@ -43,7 +43,7 @@ export class DemoComponent implements OnInit {
     );
   }
 
-  getBooks(page: number, sort?: string, order?: number): Observable<Book[]> {
+  getBooks(page: number, sort: string, order?: number): Observable<Book[]> {
     return this.http
       .get(this._baseUrl + 'books.json')
       .map((res: Response) => {
