@@ -10,6 +10,7 @@ import { IPagedResults } from '../src/IPagedResults';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/mergeMap';
+import * as _ from 'underscore';
 
 @Component({
   selector: 'app-demo-app',
@@ -42,12 +43,26 @@ export class DemoComponent implements OnInit {
     );
   }
 
-  getBooks(): Observable<Book[]> {
+  getBooks(page: number, sort?: string, order?: number): Observable<Book[]> {
     return this.http
       .get(this._baseUrl + 'books.json')
       .map((res: Response) => {
         this.books = res.json();
-        return this.books;
+
+        this.totalRecords = this.books.length;
+        let startIndex = (page - 1) * this.pageSize;
+        let endIndex = Math.min(
+          startIndex + this.pageSize - 1,
+          this.totalRecords - 1
+        );
+
+        if (order === 1) {
+          this.books = _.sortBy(this.books, sort);
+        } else {
+          this.books = _.sortBy(this.books, sort).reverse();
+        }
+
+        return this.books.slice(startIndex, endIndex + 1);
       })
       .catch(this.handleError);
   }
@@ -59,11 +74,9 @@ export class DemoComponent implements OnInit {
 
   getBooksPaged(page: number, sort?: string, order?: number) {
     this.rows = [];
-    this.totalRecords = 2;
-    this.getBooks()
+    this.getBooks(page, sort, order)
       .map((response: Book[]) => {
         this.rows = [];
-        this.totalRecords = response.length;
         return response;
       })
       .flatMap(response => response)
