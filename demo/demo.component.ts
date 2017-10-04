@@ -72,16 +72,16 @@ export class DemoComponent implements OnInit {
     return Observable.throw(error.json().error || 'Server error');
   }
 
-  getBooksPaged(page: number, sort?: string, order?: number) {
+  getBooksPaged(page: number, sort: string, order?: number) {
     this.rows = [];
     this.getBooks(page, sort, order)
       .map((response: Book[]) => {
         this.rows = [];
         return response;
       })
-      .flatMap(response => response)
+      .flatMap((response: Book[]) => response)
       .subscribe(
-        book => {
+        (book: Book) => {
           this.rows.push({
             entity: book,
             columns: [
@@ -93,7 +93,7 @@ export class DemoComponent implements OnInit {
             ]
           });
         },
-        error => {
+        (error: string) => {
           console.log(error);
         },
         () => {
@@ -113,7 +113,7 @@ export class DemoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getBooksPaged(1);
+    this.getBooksPaged(1, '_id');
 
     this.columns = [
       { title: 'Action', name: '_id', type: 'ACTIONS' },
