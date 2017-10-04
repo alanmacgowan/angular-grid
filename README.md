@@ -48,7 +48,17 @@ Finally use in one of your apps components:
 import { Component } from '@angular/core';
 
 @Component({
-  template: '<app-grid></app-grid>'
+  template: `
+    <app-grid title="Books" 
+              [rows]="rows" 
+              [columns]="columns"               
+              [totalItems]="totalRecords" 
+              [pageSize]="pageSize" 
+              (onItemEdit)="itemEdit($event)" 
+              (onItemDelete)="itemDelete($event)"
+              (onSort)="sort($event)" 
+              (onPageChanged)="pageChanged($event)">
+    </app-grid>`
 })
 export class MyComponent {}
 ```
