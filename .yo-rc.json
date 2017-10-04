@@ -1,0 +1,14 @@
+{
+  "generator-angular-library": {
+    "githubUsername": "alanmacgowan",
+    "githubRepoName": "angular-grid",
+    "npmModuleName": "angular-grid",
+    "moduleGlobal": "angularGrid",
+    "ngModuleName": "AngularGridModule",
+    "selectorPrefix": "app",
+    "projectTitle": "angular grid",
+    "projectDescription": "basic grid for angular 2",
+    "authorName": "Alan Macgowan",
+    "packageManager": "npm"
+  }
+}
