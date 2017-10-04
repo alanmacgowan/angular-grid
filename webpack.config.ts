@@ -5,6 +5,7 @@ import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import { getIfUtils, removeEmpty } from 'webpack-config-utils';
 import { AotPlugin } from '@ngtools/webpack';
 import * as OfflinePlugin from 'offline-plugin';
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 export default (environment = 'development') => {
 
@@ -57,6 +58,10 @@ export default (environment = 'development') => {
       new webpack.DefinePlugin({
         ENV: JSON.stringify(environment)
       }),
+      ifDevelopment(new CopyWebpackPlugin([{
+        from: './demo/books.json',
+        to: '.'
+    }])),
       ifProduction(new webpack.optimize.UglifyJsPlugin({
         sourceMap: true
       })),

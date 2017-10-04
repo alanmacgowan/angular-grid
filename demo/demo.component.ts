@@ -3,6 +3,13 @@ import { IGridColumn } from '../src/IGridColumn';
 import { IGridRow } from '../src/IGridRow';
 import { ISortResult } from '../src/ISortResult';
 import { Book } from './Book';
+import { IEntity } from '../src/IEntity';
+import { Observable } from 'rxjs/Observable';
+import { Http, Response } from '@angular/http';
+import { IPagedResults } from '../src/IPagedResults';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/mergeMap';
 
 @Component({
   selector: 'app-demo-app',
@@ -21,7 +28,10 @@ export class DemoComponent implements OnInit {
   columns: IGridColumn[] = [];
   rows: IGridRow[] = [];
 
-  constructor() {}
+  _baseUrl: string = '';
+  books: Book[];
+
+  constructor(private http: Http) {}
 
   pageChanged(page: number) {
     this.currentPage = page;
@@ -32,31 +42,51 @@ export class DemoComponent implements OnInit {
     );
   }
 
+  getBooks(): Observable<Book[]> {
+    return this.http
+      .get(this._baseUrl + 'books.json')
+      .map((res: Response) => {
+        this.books = res.json();
+        return this.books;
+      })
+      .catch(this.handleError);
+  }
+
+  private handleError(error: any) {
+    console.error(error);
+    return Observable.throw(error.json().error || 'Server error');
+  }
+
   getBooksPaged(page: number, sort?: string, order?: number) {
     this.rows = [];
     this.totalRecords = 2;
-    this.rows.push(
-      {
-        entity: new Book('1'),
-        columns: [
-          { type: 'ACTIONS', value: '' },
-          { value: 'Book 1' },
-          { type: 'DATE', value: new Date() },
-          { value: 'Alan Mac' },
-          { type: 'CUSTOM', value: 'Comedy' }
-        ]
-      },
-      {
-        entity: new Book('2'),
-        columns: [
-          { type: 'ACTIONS', value: '' },
-          { value: 'Book 2' },
-          { type: 'DATE', value: new Date() },
-          { value: 'John Perez' },
-          { type: 'CUSTOM', value: 'Drama' }
-        ]
-      }
-    );
+    this.getBooks()
+      .map((response: Book[]) => {
+        this.rows = [];
+        this.totalRecords = response.length;
+        return response;
+      })
+      .flatMap(response => response)
+      .subscribe(
+        book => {
+          this.rows.push({
+            entity: book,
+            columns: [
+              { type: 'ACTIONS', value: '' },
+              { value: book.title },
+              { type: 'DATE', value: book.publishDate },
+              { value: book.authors },
+              { type: 'CUSTOM', value: book.category }
+            ]
+          });
+        },
+        error => {
+          console.log(error);
+        },
+        () => {
+          console.log('book retrieval completed');
+        }
+      );
   }
 
   sort(sort: ISortResult) {
@@ -79,5 +109,13 @@ export class DemoComponent implements OnInit {
       { title: 'Authors', name: 'authors', type: '' },
       { title: 'Category', name: 'category', type: '' }
     ];
+  }
+
+  itemDelete(book: Book) {
+    alert('delete item');
+  }
+
+  itemEdit(entity: IEntity) {
+    alert('edit item');
   }
 }
