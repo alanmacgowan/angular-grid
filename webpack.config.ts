@@ -33,10 +33,16 @@ export default (environment = 'development') => {
       }, {
         test: /\.ts$/,
         loader: '@ngtools/webpack'
-      })])
+      }), {
+          test: /\.css$/,
+          loaders: ['style-loader', 'css-loader']
+      }, {
+          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          loader: 'url-loader?limit=10000',
+      }])
     },
     resolve: {
-      extensions: ['.ts', '.js']
+      extensions: ['.ts', '.js', '.css']
     },
     devServer: {
       port: 8000,
