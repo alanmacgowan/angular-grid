@@ -1331,8 +1331,8 @@ export class DemoComponent implements OnInit {
         this.books &#x3D; res.json();
 
         this.totalRecords &#x3D; this.books.length;
-        let startIndex &#x3D; (page - 1) * this.pageSize;
-        let endIndex &#x3D; Math.min(
+        const startIndex &#x3D; (page - 1) * this.pageSize;
+        const endIndex &#x3D; Math.min(
           startIndex + this.pageSize - 1,
           this.totalRecords - 1
         );
@@ -1441,7 +1441,7 @@ export class DemoComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><app-grid title="Books" [rows]="rows" [columns]="columns" (onItemEdit)="itemEdit($event)" (onItemDelete)="itemDelete($event)"(onSort)="sort($event)" [totalItems]="totalRecords" [pageSize]="pageSize" (onPageChanged)="pageChanged($event)"></app-grid></div>'
-    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'grid-header'},{'name': 'GridRowComponent', 'selector': 'grid-row'},{'name': 'PaginationComponent', 'selector': 'grid-pagination'}];
+    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'app-header'},{'name': 'GridRowComponent', 'selector': 'app-row'},{'name': 'PaginationComponent', 'selector': 'app-pagination'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DemoComponent'};
 </script>
