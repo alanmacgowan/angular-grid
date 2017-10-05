@@ -3,7 +3,7 @@ import { ISortResult } from './ISortResult';
 import { IGridColumn } from './IGridColumn';
 
 @Component({
-  selector: 'grid-header',
+  selector: 'app-header',
   template: `
   <thead>
   <tr>
@@ -31,7 +31,7 @@ export class GridHeaderComponent implements OnInit {
     this.currentSortOrder = this.currentSortOrder === 1 ? -1 : 1;
     this.sortClass =
       this.currentSortOrder === 1 ? 'fa fa-sort-desc' : 'fa fa-sort-asc';
-    var sort = { column: this.currentSort, order: this.currentSortOrder };
+    const sort = { column: this.currentSort, order: this.currentSortOrder };
     this.onSort.emit(sort);
   }
 

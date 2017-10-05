@@ -449,7 +449,7 @@
 .grid-header{
     cursor: pointer;
     text-align: left;
-} 
+}
 .box-heading {
   font-weight: bold;
   font-family: &#x27;Oswald&#x27;;
@@ -715,10 +715,10 @@ label {
   &lt;div class&#x3D;&quot;panel-heading&quot;&gt;{{title}}&lt;/div&gt;
   &lt;div class&#x3D;&quot;panel-body&quot;&gt;
       &lt;table *ngIf&#x3D;&quot;rows&quot; class&#x3D;&quot;table table-hover&quot;&gt;
-          &lt;grid-header [columns]&#x3D;&quot;columns&quot; (onSort)&#x3D;&quot;sort($event)&quot;&gt;&lt;/grid-header&gt;
-          &lt;grid-row [items]&#x3D;&quot;rows&quot; (onItemEdit)&#x3D;&quot;editItem($event)&quot; (onItemDelete)&#x3D;&quot;deleteItem($event)&quot;&gt;&lt;/grid-row&gt;
+          &lt;app-header [columns]&#x3D;&quot;columns&quot; (onSort)&#x3D;&quot;sort($event)&quot;&gt;&lt;/app-header&gt;
+          &lt;app-row [items]&#x3D;&quot;rows&quot; (onItemEdit)&#x3D;&quot;editItem($event)&quot; (onItemDelete)&#x3D;&quot;deleteItem($event)&quot;&gt;&lt;/app-row&gt;
       &lt;/table&gt;
-      &lt;grid-pagination [totalItems]&#x3D;&quot;totalItems&quot; [pageSize]&#x3D;&quot;pageSize&quot; (onPageChanged)&#x3D;&quot;pageChange($event)&quot;&gt;&lt;/grid-pagination&gt;
+      &lt;app-pagination [totalItems]&#x3D;&quot;totalItems&quot; [pageSize]&#x3D;&quot;pageSize&quot; (onPageChanged)&#x3D;&quot;pageChange($event)&quot;&gt;&lt;/app-pagination&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre></td>
@@ -1303,10 +1303,10 @@ import { IGridRow } from &#x27;./IGridRow&#x27;;
     &lt;div class&#x3D;&quot;panel-heading&quot;&gt;{{title}}&lt;/div&gt;
     &lt;div class&#x3D;&quot;panel-body&quot;&gt;
         &lt;table *ngIf&#x3D;&quot;rows&quot; class&#x3D;&quot;table table-hover&quot;&gt;
-            &lt;grid-header [columns]&#x3D;&quot;columns&quot; (onSort)&#x3D;&quot;sort($event)&quot;&gt;&lt;/grid-header&gt;
-            &lt;grid-row [items]&#x3D;&quot;rows&quot; (onItemEdit)&#x3D;&quot;editItem($event)&quot; (onItemDelete)&#x3D;&quot;deleteItem($event)&quot;&gt;&lt;/grid-row&gt;
+            &lt;app-header [columns]&#x3D;&quot;columns&quot; (onSort)&#x3D;&quot;sort($event)&quot;&gt;&lt;/app-header&gt;
+            &lt;app-row [items]&#x3D;&quot;rows&quot; (onItemEdit)&#x3D;&quot;editItem($event)&quot; (onItemDelete)&#x3D;&quot;deleteItem($event)&quot;&gt;&lt;/app-row&gt;
         &lt;/table&gt;
-        &lt;grid-pagination [totalItems]&#x3D;&quot;totalItems&quot; [pageSize]&#x3D;&quot;pageSize&quot; (onPageChanged)&#x3D;&quot;pageChange($event)&quot;&gt;&lt;/grid-pagination&gt;
+        &lt;app-pagination [totalItems]&#x3D;&quot;totalItems&quot; [pageSize]&#x3D;&quot;pageSize&quot; (onPageChanged)&#x3D;&quot;pageChange($event)&quot;&gt;&lt;/app-pagination&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &#x60;,
@@ -1319,7 +1319,7 @@ import { IGridRow } from &#x27;./IGridRow&#x27;;
 .grid-header{
     cursor: pointer;
     text-align: left;
-} 
+}
 .box-heading {
   font-weight: bold;
   font-family: &#x27;Oswald&#x27;;
@@ -1640,8 +1640,8 @@ export class GridComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>  <div class="panel panel-green">  <div class="panel-heading">{{title}}</div>  <div class="panel-body">      <table *ngIf="rows" class="table table-hover">          <grid-header [columns]="columns" (onSort)="sort($event)"></grid-header>          <grid-row [items]="rows" (onItemEdit)="editItem($event)" (onItemDelete)="deleteItem($event)"></grid-row>      </table>      <grid-pagination [totalItems]="totalItems" [pageSize]="pageSize" (onPageChanged)="pageChange($event)"></grid-pagination>  </div></div></div>'
-    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'grid-header'},{'name': 'GridRowComponent', 'selector': 'grid-row'},{'name': 'PaginationComponent', 'selector': 'grid-pagination'}];
+        var COMPONENT_TEMPLATE = '<div>  <div class="panel panel-green">  <div class="panel-heading">{{title}}</div>  <div class="panel-body">      <table *ngIf="rows" class="table table-hover">          <app-header [columns]="columns" (onSort)="sort($event)"></app-header>          <app-row [items]="rows" (onItemEdit)="editItem($event)" (onItemDelete)="deleteItem($event)"></app-row>      </table>      <app-pagination [totalItems]="totalItems" [pageSize]="pageSize" (onPageChanged)="pageChange($event)"></app-pagination>  </div></div></div>'
+    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'app-header'},{'name': 'GridRowComponent', 'selector': 'app-row'},{'name': 'PaginationComponent', 'selector': 'app-pagination'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GridComponent'};
 </script>

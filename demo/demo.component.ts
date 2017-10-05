@@ -50,8 +50,8 @@ export class DemoComponent implements OnInit {
         this.books = res.json();
 
         this.totalRecords = this.books.length;
-        let startIndex = (page - 1) * this.pageSize;
-        let endIndex = Math.min(
+        const startIndex = (page - 1) * this.pageSize;
+        const endIndex = Math.min(
           startIndex + this.pageSize - 1,
           this.totalRecords - 1
         );
