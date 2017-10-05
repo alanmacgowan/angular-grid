@@ -27,7 +27,7 @@ export default (config: any) => {
 
     webpack: {
       resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js', '.css']
       },
       module: {
         rules: [{
@@ -51,7 +51,13 @@ export default (config: any) => {
           exclude: /(node_modules|\.spec\.ts$)/,
           loader: 'istanbul-instrumenter-loader',
           enforce: 'post'
-        }]
+        }, {
+          test: /\.css$/,
+          loaders: ['style-loader', 'css-loader']
+      }, {
+          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          loader: 'url-loader?limit=10000',
+      }]
       },
       plugins: [
         new webpack.SourceMapDevToolPlugin({

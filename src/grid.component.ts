@@ -20,10 +20,10 @@ import { IGridRow } from './IGridRow';
     <div class="panel-heading">{{title}}</div>
     <div class="panel-body">
         <table *ngIf="rows" class="table table-hover">
-            <grid-header [columns]="columns" (onSort)="sort($event)"></grid-header>
-            <grid-row [items]="rows" (onItemEdit)="editItem($event)" (onItemDelete)="deleteItem($event)"></grid-row>
+            <app-header [columns]="columns" (onSort)="sort($event)"></app-header>
+            <app-row [items]="rows" (onItemEdit)="editItem($event)" (onItemDelete)="deleteItem($event)"></app-row>
         </table>
-        <grid-pagination [totalItems]="totalItems" [pageSize]="pageSize" (onPageChanged)="pageChange($event)"></grid-pagination>
+        <app-pagination [totalItems]="totalItems" [pageSize]="pageSize" (onPageChanged)="pageChange($event)"></app-pagination>
     </div>
   </div>
   `,
@@ -36,7 +36,7 @@ import { IGridRow } from './IGridRow';
 .grid-header{
     cursor: pointer;
     text-align: left;
-} 
+}
 .box-heading {
   font-weight: bold;
   font-family: 'Oswald';
