@@ -442,271 +442,267 @@
             <tr>
                 <td class="col-md-3">styles</td>
                 <td class="col-md-9"><code>
-  .grid-cell {
-    padding: 8px;
-    width: 1%;
-}
-.grid-header{
-    cursor: pointer;
-    text-align: left;
-}
-.box-heading {
-  font-weight: bold;
-  font-family: &#x27;Oswald&#x27;;
-  margin-bottom: 15px;
-}
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  height: 100%;
-}
-body {
-  font-family: &#x27;Open Sans&#x27;, sans-serif;
-  font-size: 13px;
-  line-height: 1.42857143;
-  color: #999999;
-  background-color: #f0f2f5;
-  height: 100%;
-}
-.table tbody tr td {
-  border-top: 1px solid #efefef;
-}
-textarea:focus,
-input[type&#x3D;&quot;text&quot;]:focus,
-input[type&#x3D;&quot;password&quot;]:focus,
-input[type&#x3D;&quot;datetime&quot;]:focus,
-input[type&#x3D;&quot;datetime-local&quot;]:focus,
-input[type&#x3D;&quot;date&quot;]:focus,
-input[type&#x3D;&quot;month&quot;]:focus,
-input[type&#x3D;&quot;time&quot;]:focus,
-input[type&#x3D;&quot;week&quot;]:focus,
-input[type&#x3D;&quot;number&quot;]:focus,
-input[type&#x3D;&quot;email&quot;]:focus,
-input[type&#x3D;&quot;url&quot;]:focus,
-input[type&#x3D;&quot;search&quot;]:focus,
-input[type&#x3D;&quot;tel&quot;]:focus,
-input[type&#x3D;&quot;color&quot;]:focus,
-.uneditable-input:focus {
-  border-color: #999999;
-  box-shadow: none;
-  outline: 0 none;
-}
-a:focus,
-.btn:focus {
-  outline: 0 !important;
-}
-.img-circle {
-  border-radius: 50% !important;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: &quot;Open Sans&quot;, sans-serif;
-  font-weight: 300;
-}
-.panel {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
-   border: 5px solid #e5e5e5;
-    border-radius: 0 !important;
+    .grid-cell {
+      padding: 8px;
+      width: 1%;
+  }
+  .grid-header{
+      cursor: pointer;
+      text-align: left;
+  }
+  .box-heading {
+    font-weight: bold;
+    font-family: &#x27;Oswald&#x27;;
+    margin-bottom: 15px;
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+  }
+  body {
+    font-family: &#x27;Open Sans&#x27;, sans-serif;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #999999;
+    background-color: #f0f2f5;
+    height: 100%;
+  }
+  .table tbody tr td {
+    border-top: 1px solid #efefef;
+  }
+  textarea:focus,
+  input[type&#x3D;&quot;text&quot;]:focus,
+  input[type&#x3D;&quot;password&quot;]:focus,
+  input[type&#x3D;&quot;datetime&quot;]:focus,
+  input[type&#x3D;&quot;datetime-local&quot;]:focus,
+  input[type&#x3D;&quot;date&quot;]:focus,
+  input[type&#x3D;&quot;month&quot;]:focus,
+  input[type&#x3D;&quot;time&quot;]:focus,
+  input[type&#x3D;&quot;week&quot;]:focus,
+  input[type&#x3D;&quot;number&quot;]:focus,
+  input[type&#x3D;&quot;email&quot;]:focus,
+  input[type&#x3D;&quot;url&quot;]:focus,
+  input[type&#x3D;&quot;search&quot;]:focus,
+  input[type&#x3D;&quot;tel&quot;]:focus,
+  input[type&#x3D;&quot;color&quot;]:focus,
+  .uneditable-input:focus {
+    border-color: #999999;
+    box-shadow: none;
+    outline: 0 none;
+  }
+  a:focus,
+  .btn:focus {
+    outline: 0 !important;
+  }
+  .img-circle {
+    border-radius: 50% !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: &quot;Open Sans&quot;, sans-serif;
+    font-weight: 300;
+  }
+  .panel {
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
-}
-.panel &gt; .panel-heading {
-  font-size: 18px;
-  padding: 7px 15px;
-  border-top-right-radius: 0 !important;
-  border-top-left-radius: 0 !important;
-  border-color: #e5e5e5 !important;
-}
-.panel &gt; .panel-footer {
-  font-size: 18px;
-  padding: 7px 15px;
-  border-bottom-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-}
-.panel.panel-primary {
-  border-color: #dc6767;
-}
-.panel.panel-primary &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #dc6767;
-  border-color: #dc6767 !important;
-}
-.panel.panel-primary &gt; .panel-footer {
-  color: #FFFFFF;
-  background: #dc6767;
-  border-color: #dc6767 !important;
-}
-.panel.panel-red {
-  border-color: #bf4346;
-}
-.panel.panel-red &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #bf4346;
-  border-color: #bf4346 !important;
-}
-.panel.panel-red &gt; .panel-footer {
-  color: #FFFFFF;
-  background: #bf4346;
-  border-color: #bf4346 !important;
-}
-.panel.panel-orange {
-  border-color: #e9662c;
-}
-.panel.panel-orange &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #e9662c;
-  border-color: #e9662c !important;
-}
-.panel.panel-orange &gt; .panel-footer {
-  color: #FFFFFF;
-  background: #e9662c;
-  border-color: #e9662c !important;
-}
-.panel.panel-green {
-  border-color: #488c6c;
-}
-.panel.panel-green &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #488c6c;
-  border-color: #488c6c !important;
-}
-.panel.panel-green &gt; .panel-footer {
-  color: #FFFFFF;
-  background: #488c6c;
-  border-color: #488c6c !important;
-}
-.panel.panel-yellow {
-  border-color: #f2994b;
-}
-.panel.panel-yellow &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #f2994b;
-  border-color: #f2994b !important;
-}
-
-
-
-[class^&#x3D;&quot;fa-&quot;],
-[class^&#x3D;&quot;glyphicon-&quot;],
-[class^&#x3D;&quot;icon-&quot;],
-[class*&#x3D;&quot; fa-&quot;],
-[class*&#x3D;&quot; glyphicon-&quot;],
-[class*&#x3D;&quot; icon-&quot;] {
-  display: inline-block;
-  margin-top: 1px;
-  font-size: 14px;
-  *margin-right: .3em;
-  line-height: 14px;
-  -webkit-font-smoothing: antialiased;
-}
-li [class^&#x3D;&quot;fa-&quot;],
-li [class^&#x3D;&quot;glyphicon-&quot;],
-li [class^&#x3D;&quot;icon-&quot;],
-li [class*&#x3D;&quot; fa-&quot;],
-li [class*&#x3D;&quot; glyphicon-&quot;],
-li [class*&#x3D;&quot; icon-&quot;] {
-  display: inline-block;
-  width: 1.25em;
-  text-align: center;
-}
-li [class^&#x3D;&quot;glyphicon-&quot;],
-li [class*&#x3D;&quot; glyphicon-&quot;] {
-  top: 2px;
-}
-li [class^&#x3D;&quot;icon-&quot;],
-li [class*&#x3D;&quot; icon-&quot;] {
-  top: 1px;
-  position: relative;
-}
-li [class^&#x3D;&quot;fa-&quot;].icon-large,
-li [class^&#x3D;&quot;glyphicon-&quot;].icon-large,
-li [class^&#x3D;&quot;icon-&quot;].icon-large,
-li [class*&#x3D;&quot; fa-&quot;].icon-large,
-li [class*&#x3D;&quot; glyphicon-&quot;].icon-large,
-li [class*&#x3D;&quot; icon-&quot;].icon-large {
-  width: 1.5625em;
-}
-.table thead tr th,
-.table thead tr td {
-  border-bottom: 0;
-}
-.table.table-sm {
-  font-size: .875em;
-}
-.table.table-lg {
-  font-size: 1.2em;
-}
-.table &gt; input[type&#x3D;&#x27;text&#x27;] {
-  font-weight: normal;
-  height: 30px;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-.table select {
-  font-weight: normal;
-  height: 30px;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.table.table-hover-color tbody tr:hover td:first-child {
-  border-left: 4px solid #dc6767;
-}
-.table-actions {
-  margin-bottom: 20px;
-}
-.table-actions.bottom {
-  margin-bottom: 0;
-  margin-top: 20px;
-}
-.table-actions .pagination {
-  margin: 0;
-}
-.fixed-header {
-  top: 0;
-  position: fixed;
-  width: auto;
-  display: none;
-  border: none;
-  z-index: 999;
-}
-.page-header-breadcrumb {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
-}
-.form-control {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border-color: #e5e5e5;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
-}
-label {
-  font-weight: normal;
-}
-</code></td>
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+     border: 5px solid #e5e5e5;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+  }
+  .panel &gt; .panel-heading {
+    font-size: 18px;
+    padding: 7px 15px;
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-color: #e5e5e5 !important;
+  }
+  .panel &gt; .panel-footer {
+    font-size: 18px;
+    padding: 7px 15px;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+  .panel.panel-primary {
+    border-color: #dc6767;
+  }
+  .panel.panel-primary &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #dc6767;
+    border-color: #dc6767 !important;
+  }
+  .panel.panel-primary &gt; .panel-footer {
+    color: #FFFFFF;
+    background: #dc6767;
+    border-color: #dc6767 !important;
+  }
+  .panel.panel-red {
+    border-color: #bf4346;
+  }
+  .panel.panel-red &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #bf4346;
+    border-color: #bf4346 !important;
+  }
+  .panel.panel-red &gt; .panel-footer {
+    color: #FFFFFF;
+    background: #bf4346;
+    border-color: #bf4346 !important;
+  }
+  .panel.panel-orange {
+    border-color: #e9662c;
+  }
+  .panel.panel-orange &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #e9662c;
+    border-color: #e9662c !important;
+  }
+  .panel.panel-orange &gt; .panel-footer {
+    color: #FFFFFF;
+    background: #e9662c;
+    border-color: #e9662c !important;
+  }
+  .panel.panel-green {
+    border-color: #488c6c;
+  }
+  .panel.panel-green &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #488c6c;
+    border-color: #488c6c !important;
+  }
+  .panel.panel-green &gt; .panel-footer {
+    color: #FFFFFF;
+    background: #488c6c;
+    border-color: #488c6c !important;
+  }
+  .panel.panel-yellow {
+    border-color: #f2994b;
+  }
+  .panel.panel-yellow &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #f2994b;
+    border-color: #f2994b !important;
+  }
+  [class^&#x3D;&quot;fa-&quot;],
+  [class^&#x3D;&quot;glyphicon-&quot;],
+  [class^&#x3D;&quot;icon-&quot;],
+  [class*&#x3D;&quot; fa-&quot;],
+  [class*&#x3D;&quot; glyphicon-&quot;],
+  [class*&#x3D;&quot; icon-&quot;] {
+    display: inline-block;
+    margin-top: 1px;
+    font-size: 14px;
+    *margin-right: .3em;
+    line-height: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+  li [class^&#x3D;&quot;fa-&quot;],
+  li [class^&#x3D;&quot;glyphicon-&quot;],
+  li [class^&#x3D;&quot;icon-&quot;],
+  li [class*&#x3D;&quot; fa-&quot;],
+  li [class*&#x3D;&quot; glyphicon-&quot;],
+  li [class*&#x3D;&quot; icon-&quot;] {
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+  }
+  li [class^&#x3D;&quot;glyphicon-&quot;],
+  li [class*&#x3D;&quot; glyphicon-&quot;] {
+    top: 2px;
+  }
+  li [class^&#x3D;&quot;icon-&quot;],
+  li [class*&#x3D;&quot; icon-&quot;] {
+    top: 1px;
+    position: relative;
+  }
+  li [class^&#x3D;&quot;fa-&quot;].icon-large,
+  li [class^&#x3D;&quot;glyphicon-&quot;].icon-large,
+  li [class^&#x3D;&quot;icon-&quot;].icon-large,
+  li [class*&#x3D;&quot; fa-&quot;].icon-large,
+  li [class*&#x3D;&quot; glyphicon-&quot;].icon-large,
+  li [class*&#x3D;&quot; icon-&quot;].icon-large {
+    width: 1.5625em;
+  }
+  .table thead tr th,
+  .table thead tr td {
+    border-bottom: 0;
+  }
+  .table.table-sm {
+    font-size: .875em;
+  }
+  .table.table-lg {
+    font-size: 1.2em;
+  }
+  .table &gt; input[type&#x3D;&#x27;text&#x27;] {
+    font-weight: normal;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .table select {
+    font-weight: normal;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .table.table-hover-color tbody tr:hover td:first-child {
+    border-left: 4px solid #dc6767;
+  }
+  .table-actions {
+    margin-bottom: 20px;
+  }
+  .table-actions.bottom {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+  .table-actions .pagination {
+    margin: 0;
+  }
+  .fixed-header {
+    top: 0;
+    position: fixed;
+    width: auto;
+    display: none;
+    border: none;
+    z-index: 999;
+  }
+  .page-header-breadcrumb {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+  }
+  .form-control {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-color: #e5e5e5;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+  }
+  label {
+    font-weight: normal;
+  }
+  </code></td>
             </tr>
 
             <tr>
@@ -821,7 +817,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="311" class="link-to-prism">src/grid.component.ts:311</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="307" class="link-to-prism">src/grid.component.ts:307</a></div>
                                 </td>
                             </tr>
     
@@ -847,7 +843,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="307" class="link-to-prism">src/grid.component.ts:307</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="303" class="link-to-prism">src/grid.component.ts:303</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -871,7 +867,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="311" class="link-to-prism">src/grid.component.ts:311</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="307" class="link-to-prism">src/grid.component.ts:307</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -892,7 +888,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="308" class="link-to-prism">src/grid.component.ts:308</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="304" class="link-to-prism">src/grid.component.ts:304</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -913,7 +909,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="309" class="link-to-prism">src/grid.component.ts:309</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="305" class="link-to-prism">src/grid.component.ts:305</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -937,7 +933,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="310" class="link-to-prism">src/grid.component.ts:310</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="306" class="link-to-prism">src/grid.component.ts:306</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -960,7 +956,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="303" class="link-to-prism">src/grid.component.ts:303</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="299" class="link-to-prism">src/grid.component.ts:299</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -979,7 +975,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="302" class="link-to-prism">src/grid.component.ts:302</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="298" class="link-to-prism">src/grid.component.ts:298</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -998,7 +994,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="305" class="link-to-prism">src/grid.component.ts:305</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="301" class="link-to-prism">src/grid.component.ts:301</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -1017,7 +1013,7 @@ label {
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="304" class="link-to-prism">src/grid.component.ts:304</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="300" class="link-to-prism">src/grid.component.ts:300</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -1048,7 +1044,7 @@ label {
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="325" class="link-to-prism">src/grid.component.ts:325</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="321" class="link-to-prism">src/grid.component.ts:321</a></div>
                                 </td>
                             </tr>
     
@@ -1109,7 +1105,7 @@ label {
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="321" class="link-to-prism">src/grid.component.ts:321</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="317" class="link-to-prism">src/grid.component.ts:317</a></div>
                                 </td>
                             </tr>
     
@@ -1170,7 +1166,7 @@ label {
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="329" class="link-to-prism">src/grid.component.ts:329</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="325" class="link-to-prism">src/grid.component.ts:325</a></div>
                                 </td>
                             </tr>
     
@@ -1231,7 +1227,7 @@ label {
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="317" class="link-to-prism">src/grid.component.ts:317</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="313" class="link-to-prism">src/grid.component.ts:313</a></div>
                                 </td>
                             </tr>
     
@@ -1299,284 +1295,280 @@ import { IGridRow } from &#x27;./IGridRow&#x27;;
 @Component({
   selector: &#x27;app-grid&#x27;,
   template: &#x60;
-    &lt;div class&#x3D;&quot;panel panel-green&quot;&gt;
-    &lt;div class&#x3D;&quot;panel-heading&quot;&gt;{{title}}&lt;/div&gt;
-    &lt;div class&#x3D;&quot;panel-body&quot;&gt;
-        &lt;table *ngIf&#x3D;&quot;rows&quot; class&#x3D;&quot;table table-hover&quot;&gt;
-            &lt;app-header [columns]&#x3D;&quot;columns&quot; (onSort)&#x3D;&quot;sort($event)&quot;&gt;&lt;/app-header&gt;
-            &lt;app-row [items]&#x3D;&quot;rows&quot; (onItemEdit)&#x3D;&quot;editItem($event)&quot; (onItemDelete)&#x3D;&quot;deleteItem($event)&quot;&gt;&lt;/app-row&gt;
-        &lt;/table&gt;
-        &lt;app-pagination [totalItems]&#x3D;&quot;totalItems&quot; [pageSize]&#x3D;&quot;pageSize&quot; (onPageChanged)&#x3D;&quot;pageChange($event)&quot;&gt;&lt;/app-pagination&gt;
+      &lt;div class&#x3D;&quot;panel panel-green&quot;&gt;
+      &lt;div class&#x3D;&quot;panel-heading&quot;&gt;{{title}}&lt;/div&gt;
+      &lt;div class&#x3D;&quot;panel-body&quot;&gt;
+          &lt;table *ngIf&#x3D;&quot;rows&quot; class&#x3D;&quot;table table-hover&quot;&gt;
+              &lt;app-header [columns]&#x3D;&quot;columns&quot; (onSort)&#x3D;&quot;sort($event)&quot;&gt;&lt;/app-header&gt;
+              &lt;app-row [items]&#x3D;&quot;rows&quot; (onItemEdit)&#x3D;&quot;editItem($event)&quot; (onItemDelete)&#x3D;&quot;deleteItem($event)&quot;&gt;&lt;/app-row&gt;
+          &lt;/table&gt;
+          &lt;app-pagination [totalItems]&#x3D;&quot;totalItems&quot; [pageSize]&#x3D;&quot;pageSize&quot; (onPageChanged)&#x3D;&quot;pageChange($event)&quot;&gt;&lt;/app-pagination&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-  &#x60;,
+    &#x60;,
   styles: [
     &#x60;
-  .grid-cell {
-    padding: 8px;
-    width: 1%;
-}
-.grid-header{
-    cursor: pointer;
-    text-align: left;
-}
-.box-heading {
-  font-weight: bold;
-  font-family: &#x27;Oswald&#x27;;
-  margin-bottom: 15px;
-}
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  height: 100%;
-}
-body {
-  font-family: &#x27;Open Sans&#x27;, sans-serif;
-  font-size: 13px;
-  line-height: 1.42857143;
-  color: #999999;
-  background-color: #f0f2f5;
-  height: 100%;
-}
-.table tbody tr td {
-  border-top: 1px solid #efefef;
-}
-textarea:focus,
-input[type&#x3D;&quot;text&quot;]:focus,
-input[type&#x3D;&quot;password&quot;]:focus,
-input[type&#x3D;&quot;datetime&quot;]:focus,
-input[type&#x3D;&quot;datetime-local&quot;]:focus,
-input[type&#x3D;&quot;date&quot;]:focus,
-input[type&#x3D;&quot;month&quot;]:focus,
-input[type&#x3D;&quot;time&quot;]:focus,
-input[type&#x3D;&quot;week&quot;]:focus,
-input[type&#x3D;&quot;number&quot;]:focus,
-input[type&#x3D;&quot;email&quot;]:focus,
-input[type&#x3D;&quot;url&quot;]:focus,
-input[type&#x3D;&quot;search&quot;]:focus,
-input[type&#x3D;&quot;tel&quot;]:focus,
-input[type&#x3D;&quot;color&quot;]:focus,
-.uneditable-input:focus {
-  border-color: #999999;
-  box-shadow: none;
-  outline: 0 none;
-}
-a:focus,
-.btn:focus {
-  outline: 0 !important;
-}
-.img-circle {
-  border-radius: 50% !important;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: &quot;Open Sans&quot;, sans-serif;
-  font-weight: 300;
-}
-.panel {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
-   border: 5px solid #e5e5e5;
-    border-radius: 0 !important;
+    .grid-cell {
+      padding: 8px;
+      width: 1%;
+  }
+  .grid-header{
+      cursor: pointer;
+      text-align: left;
+  }
+  .box-heading {
+    font-weight: bold;
+    font-family: &#x27;Oswald&#x27;;
+    margin-bottom: 15px;
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+  }
+  body {
+    font-family: &#x27;Open Sans&#x27;, sans-serif;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #999999;
+    background-color: #f0f2f5;
+    height: 100%;
+  }
+  .table tbody tr td {
+    border-top: 1px solid #efefef;
+  }
+  textarea:focus,
+  input[type&#x3D;&quot;text&quot;]:focus,
+  input[type&#x3D;&quot;password&quot;]:focus,
+  input[type&#x3D;&quot;datetime&quot;]:focus,
+  input[type&#x3D;&quot;datetime-local&quot;]:focus,
+  input[type&#x3D;&quot;date&quot;]:focus,
+  input[type&#x3D;&quot;month&quot;]:focus,
+  input[type&#x3D;&quot;time&quot;]:focus,
+  input[type&#x3D;&quot;week&quot;]:focus,
+  input[type&#x3D;&quot;number&quot;]:focus,
+  input[type&#x3D;&quot;email&quot;]:focus,
+  input[type&#x3D;&quot;url&quot;]:focus,
+  input[type&#x3D;&quot;search&quot;]:focus,
+  input[type&#x3D;&quot;tel&quot;]:focus,
+  input[type&#x3D;&quot;color&quot;]:focus,
+  .uneditable-input:focus {
+    border-color: #999999;
+    box-shadow: none;
+    outline: 0 none;
+  }
+  a:focus,
+  .btn:focus {
+    outline: 0 !important;
+  }
+  .img-circle {
+    border-radius: 50% !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: &quot;Open Sans&quot;, sans-serif;
+    font-weight: 300;
+  }
+  .panel {
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
-}
-.panel &gt; .panel-heading {
-  font-size: 18px;
-  padding: 7px 15px;
-  border-top-right-radius: 0 !important;
-  border-top-left-radius: 0 !important;
-  border-color: #e5e5e5 !important;
-}
-.panel &gt; .panel-footer {
-  font-size: 18px;
-  padding: 7px 15px;
-  border-bottom-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-}
-.panel.panel-primary {
-  border-color: #dc6767;
-}
-.panel.panel-primary &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #dc6767;
-  border-color: #dc6767 !important;
-}
-.panel.panel-primary &gt; .panel-footer {
-  color: #FFFFFF;
-  background: #dc6767;
-  border-color: #dc6767 !important;
-}
-.panel.panel-red {
-  border-color: #bf4346;
-}
-.panel.panel-red &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #bf4346;
-  border-color: #bf4346 !important;
-}
-.panel.panel-red &gt; .panel-footer {
-  color: #FFFFFF;
-  background: #bf4346;
-  border-color: #bf4346 !important;
-}
-.panel.panel-orange {
-  border-color: #e9662c;
-}
-.panel.panel-orange &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #e9662c;
-  border-color: #e9662c !important;
-}
-.panel.panel-orange &gt; .panel-footer {
-  color: #FFFFFF;
-  background: #e9662c;
-  border-color: #e9662c !important;
-}
-.panel.panel-green {
-  border-color: #488c6c;
-}
-.panel.panel-green &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #488c6c;
-  border-color: #488c6c !important;
-}
-.panel.panel-green &gt; .panel-footer {
-  color: #FFFFFF;
-  background: #488c6c;
-  border-color: #488c6c !important;
-}
-.panel.panel-yellow {
-  border-color: #f2994b;
-}
-.panel.panel-yellow &gt; .panel-heading {
-  color: #FFFFFF;
-  background: #f2994b;
-  border-color: #f2994b !important;
-}
-
-
-
-[class^&#x3D;&quot;fa-&quot;],
-[class^&#x3D;&quot;glyphicon-&quot;],
-[class^&#x3D;&quot;icon-&quot;],
-[class*&#x3D;&quot; fa-&quot;],
-[class*&#x3D;&quot; glyphicon-&quot;],
-[class*&#x3D;&quot; icon-&quot;] {
-  display: inline-block;
-  margin-top: 1px;
-  font-size: 14px;
-  *margin-right: .3em;
-  line-height: 14px;
-  -webkit-font-smoothing: antialiased;
-}
-li [class^&#x3D;&quot;fa-&quot;],
-li [class^&#x3D;&quot;glyphicon-&quot;],
-li [class^&#x3D;&quot;icon-&quot;],
-li [class*&#x3D;&quot; fa-&quot;],
-li [class*&#x3D;&quot; glyphicon-&quot;],
-li [class*&#x3D;&quot; icon-&quot;] {
-  display: inline-block;
-  width: 1.25em;
-  text-align: center;
-}
-li [class^&#x3D;&quot;glyphicon-&quot;],
-li [class*&#x3D;&quot; glyphicon-&quot;] {
-  top: 2px;
-}
-li [class^&#x3D;&quot;icon-&quot;],
-li [class*&#x3D;&quot; icon-&quot;] {
-  top: 1px;
-  position: relative;
-}
-li [class^&#x3D;&quot;fa-&quot;].icon-large,
-li [class^&#x3D;&quot;glyphicon-&quot;].icon-large,
-li [class^&#x3D;&quot;icon-&quot;].icon-large,
-li [class*&#x3D;&quot; fa-&quot;].icon-large,
-li [class*&#x3D;&quot; glyphicon-&quot;].icon-large,
-li [class*&#x3D;&quot; icon-&quot;].icon-large {
-  width: 1.5625em;
-}
-.table thead tr th,
-.table thead tr td {
-  border-bottom: 0;
-}
-.table.table-sm {
-  font-size: .875em;
-}
-.table.table-lg {
-  font-size: 1.2em;
-}
-.table &gt; input[type&#x3D;&#x27;text&#x27;] {
-  font-weight: normal;
-  height: 30px;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-.table select {
-  font-weight: normal;
-  height: 30px;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.table.table-hover-color tbody tr:hover td:first-child {
-  border-left: 4px solid #dc6767;
-}
-.table-actions {
-  margin-bottom: 20px;
-}
-.table-actions.bottom {
-  margin-bottom: 0;
-  margin-top: 20px;
-}
-.table-actions .pagination {
-  margin: 0;
-}
-.fixed-header {
-  top: 0;
-  position: fixed;
-  width: auto;
-  display: none;
-  border: none;
-  z-index: 999;
-}
-.page-header-breadcrumb {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
-}
-.form-control {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border-color: #e5e5e5;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
-}
-label {
-  font-weight: normal;
-}
-&#x60;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+     border: 5px solid #e5e5e5;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+  }
+  .panel &gt; .panel-heading {
+    font-size: 18px;
+    padding: 7px 15px;
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-color: #e5e5e5 !important;
+  }
+  .panel &gt; .panel-footer {
+    font-size: 18px;
+    padding: 7px 15px;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+  .panel.panel-primary {
+    border-color: #dc6767;
+  }
+  .panel.panel-primary &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #dc6767;
+    border-color: #dc6767 !important;
+  }
+  .panel.panel-primary &gt; .panel-footer {
+    color: #FFFFFF;
+    background: #dc6767;
+    border-color: #dc6767 !important;
+  }
+  .panel.panel-red {
+    border-color: #bf4346;
+  }
+  .panel.panel-red &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #bf4346;
+    border-color: #bf4346 !important;
+  }
+  .panel.panel-red &gt; .panel-footer {
+    color: #FFFFFF;
+    background: #bf4346;
+    border-color: #bf4346 !important;
+  }
+  .panel.panel-orange {
+    border-color: #e9662c;
+  }
+  .panel.panel-orange &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #e9662c;
+    border-color: #e9662c !important;
+  }
+  .panel.panel-orange &gt; .panel-footer {
+    color: #FFFFFF;
+    background: #e9662c;
+    border-color: #e9662c !important;
+  }
+  .panel.panel-green {
+    border-color: #488c6c;
+  }
+  .panel.panel-green &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #488c6c;
+    border-color: #488c6c !important;
+  }
+  .panel.panel-green &gt; .panel-footer {
+    color: #FFFFFF;
+    background: #488c6c;
+    border-color: #488c6c !important;
+  }
+  .panel.panel-yellow {
+    border-color: #f2994b;
+  }
+  .panel.panel-yellow &gt; .panel-heading {
+    color: #FFFFFF;
+    background: #f2994b;
+    border-color: #f2994b !important;
+  }
+  [class^&#x3D;&quot;fa-&quot;],
+  [class^&#x3D;&quot;glyphicon-&quot;],
+  [class^&#x3D;&quot;icon-&quot;],
+  [class*&#x3D;&quot; fa-&quot;],
+  [class*&#x3D;&quot; glyphicon-&quot;],
+  [class*&#x3D;&quot; icon-&quot;] {
+    display: inline-block;
+    margin-top: 1px;
+    font-size: 14px;
+    *margin-right: .3em;
+    line-height: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+  li [class^&#x3D;&quot;fa-&quot;],
+  li [class^&#x3D;&quot;glyphicon-&quot;],
+  li [class^&#x3D;&quot;icon-&quot;],
+  li [class*&#x3D;&quot; fa-&quot;],
+  li [class*&#x3D;&quot; glyphicon-&quot;],
+  li [class*&#x3D;&quot; icon-&quot;] {
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+  }
+  li [class^&#x3D;&quot;glyphicon-&quot;],
+  li [class*&#x3D;&quot; glyphicon-&quot;] {
+    top: 2px;
+  }
+  li [class^&#x3D;&quot;icon-&quot;],
+  li [class*&#x3D;&quot; icon-&quot;] {
+    top: 1px;
+    position: relative;
+  }
+  li [class^&#x3D;&quot;fa-&quot;].icon-large,
+  li [class^&#x3D;&quot;glyphicon-&quot;].icon-large,
+  li [class^&#x3D;&quot;icon-&quot;].icon-large,
+  li [class*&#x3D;&quot; fa-&quot;].icon-large,
+  li [class*&#x3D;&quot; glyphicon-&quot;].icon-large,
+  li [class*&#x3D;&quot; icon-&quot;].icon-large {
+    width: 1.5625em;
+  }
+  .table thead tr th,
+  .table thead tr td {
+    border-bottom: 0;
+  }
+  .table.table-sm {
+    font-size: .875em;
+  }
+  .table.table-lg {
+    font-size: 1.2em;
+  }
+  .table &gt; input[type&#x3D;&#x27;text&#x27;] {
+    font-weight: normal;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .table select {
+    font-weight: normal;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .table.table-hover-color tbody tr:hover td:first-child {
+    border-left: 4px solid #dc6767;
+  }
+  .table-actions {
+    margin-bottom: 20px;
+  }
+  .table-actions.bottom {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+  .table-actions .pagination {
+    margin: 0;
+  }
+  .fixed-header {
+    top: 0;
+    position: fixed;
+    width: auto;
+    display: none;
+    border: none;
+    z-index: 999;
+  }
+  .page-header-breadcrumb {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+  }
+  .form-control {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-color: #e5e5e5;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+  }
+  label {
+    font-weight: normal;
+  }
+  &#x60;
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
