@@ -36,10 +36,16 @@ export default {
       test: /\.ts$/,
       loader: 'ts-loader',
       exclude: /node_modules/
-    }]
+    }, {
+      test: /\.css$/,
+      loaders: ['style-loader', 'css-loader']
+  }, {
+      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url-loader?limit=10000',
+  }]
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js', '.css']
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
