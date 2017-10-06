@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>angular-grid documentation</title>
+        <title>angular-app-grid documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="./" class="navbar-brand">angular-grid documentation</a>
+            <a href="./" class="navbar-brand">angular-app-grid documentation</a>
             <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
         </div>
 
@@ -26,7 +26,7 @@
                 <ul class="list">
             
                     <li class="title">
-                        <a href="./index.html">angular-grid documentation</a>
+                        <a href="./index.html">angular-app-grid documentation</a>
                     </li>
             
                     <li class="divider"></li>
@@ -199,7 +199,7 @@
                        <ul class="list">
                    
                            <li class="title">
-                               <a href="./index.html">angular-grid documentation</a>
+                               <a href="./index.html">angular-app-grid documentation</a>
                            </li>
                    
                            <li class="divider"></li>
@@ -372,7 +372,7 @@
 <h1 id="angular-grid-wip-">angular grid [WIP]</h1>
 <p><a href="https://travis-ci.org/alanmacgowan/angular-grid"><img src="https://travis-ci.org/alanmacgowan/angular-grid.svg?branch=master" alt="Build Status" class="img-responsive"></a>
 <a href="https://codecov.io/gh/alanmacgowan/angular-grid"><img src="https://codecov.io/gh/alanmacgowan/angular-grid/branch/master/graph/badge.svg" alt="codecov" class="img-responsive"></a>
-<a href="http://badge.fury.io/js/angular-grid"><img src="https://badge.fury.io/js/angular-grid.svg" alt="npm version" class="img-responsive"></a>
+<a href="http://badge.fury.io/js/angular-app-grid"><img src="https://badge.fury.io/js/angular-app-grid.svg" alt="npm version" class="img-responsive"></a>
 <a href="https://david-dm.org/alanmacgowan/angular-grid?type=dev"><img src="https://david-dm.org/alanmacgowan/angular-grid/dev-status.svg" alt="devDependency Status" class="img-responsive"></a>
 <a href="https://github.com/alanmacgowan/angular-grid/issues"><img src="https://img.shields.io/github/issues/alanmacgowan/angular-grid.svg" alt="GitHub issues" class="img-responsive"></a>
 <a href="https://github.com/alanmacgowan/angular-grid/stargazers"><img src="https://img.shields.io/github/stars/alanmacgowan/angular-grid.svg" alt="GitHub stars" class="img-responsive"></a>
@@ -391,9 +391,9 @@
 <p>basic grid for angular 2</p>
 <h2 id="installation">Installation</h2>
 <p>Install through npm:</p>
-<pre class="line-numbers"><code class="language-none">npm install --save angular-grid</code></pre><p>Then include in your apps module:</p>
+<pre class="line-numbers"><code class="language-none">npm install --save angular-app-grid</code></pre><p>Then include in your apps module:</p>
 <pre class="line-numbers"><code class="language-typescript">import { NgModule } from &#39;&#64;angular/core&#39;;
-import { AngularGridModule } from &#39;angular-grid&#39;;
+import { AngularGridModule } from &#39;angular-app-grid&#39;;
 
 &#64;NgModule({
   imports: [
@@ -416,7 +416,55 @@ export class MyModule {}</code></pre><p>Finally use in one of your apps componen
               (onPageChanged)=&quot;pageChanged($event)&quot;&gt;
     &lt;/app-grid&gt;`
 })
-export class MyComponent {}</code></pre><p>You may also find it useful to view the <a href="https://github.com/alanmacgowan/angular-grid/blob/master/demo/demo.component.ts">demo source</a>.</p>
+export class MyComponent {
+  totalRecords: number = 0;
+  pageSize: number = 5;
+  currentPage: number = 1;
+  currentSort: string = &#39;_id&#39;;
+  currentSortOrder: number = 1;
+  columns: IGridColumn[] = [];
+  rows: IGridRow[] = [];
+
+  constructor() {}
+
+  pageChanged(page: number) {
+    this.currentPage = page;
+
+    //Call get data
+  }
+
+  getBData(page: number, sort: string, order?: number) {
+    this.rows = [];
+
+    //get data
+  }
+
+  sort(sort: ISortResult) {
+    this.currentSort = sort.column;
+    this.currentSortOrder = sort.order;
+
+   //Call get data
+  }
+
+  ngOnInit() {
+    //Call get data
+
+    //define grid columns
+    this.columns = [
+      { title: &#39;Action&#39;, name: &#39;_id&#39;, type: &#39;ACTIONS&#39; },
+      ...
+    ];
+  }
+
+  itemDelete(entity: IEntity) {
+    //implement delete functionality
+  }
+
+  itemEdit(entity: IEntity) {
+    //implement edit functionality
+  }
+
+}</code></pre><p>You may also find it useful to view the <a href="https://github.com/alanmacgowan/angular-grid/blob/master/demo/demo.component.ts">demo source</a>.</p>
 <h3 id="usage-without-a-module-bundler">Usage without a module bundler</h3>
 <pre class="line-numbers"><code class="language-none">&lt;script src=&quot;node_modules/angular-grid/bundles/angular-grid.umd.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
