@@ -427,7 +427,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>grid-header</code></td>
+                <td class="col-md-9"><code>app-header</code></td>
             </tr>
 
 
@@ -780,7 +780,7 @@ import { ISortResult } from &#x27;./ISortResult&#x27;;
 import { IGridColumn } from &#x27;./IGridColumn&#x27;;
 
 @Component({
-  selector: &#x27;grid-header&#x27;,
+  selector: &#x27;app-header&#x27;,
   template: &#x60;
   &lt;thead&gt;
   &lt;tr&gt;
@@ -808,7 +808,7 @@ export class GridHeaderComponent implements OnInit {
     this.currentSortOrder &#x3D; this.currentSortOrder &#x3D;&#x3D;&#x3D; 1 ? -1 : 1;
     this.sortClass &#x3D;
       this.currentSortOrder &#x3D;&#x3D;&#x3D; 1 ? &#x27;fa fa-sort-desc&#x27; : &#x27;fa fa-sort-asc&#x27;;
-    var sort &#x3D; { column: this.currentSort, order: this.currentSortOrder };
+    const sort &#x3D; { column: this.currentSort, order: this.currentSortOrder };
     this.onSort.emit(sort);
   }
 
@@ -844,7 +844,7 @@ export class GridHeaderComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div>  <thead>  <tr>      <th *ngFor="let column of columns" class="grid-cell grid-header" >          <span (click)="sort(column.name)">{{column.title}} <span *ngIf="currentSort == column.name">&nbsp;<i [class]="sortClass"></i></span>          </span>      </th>  </tr></thead></div>'
-    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'grid-header'},{'name': 'GridRowComponent', 'selector': 'grid-row'},{'name': 'PaginationComponent', 'selector': 'grid-pagination'}];
+    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'app-header'},{'name': 'GridRowComponent', 'selector': 'app-row'},{'name': 'PaginationComponent', 'selector': 'app-pagination'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GridHeaderComponent'};
 </script>

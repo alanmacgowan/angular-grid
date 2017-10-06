@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'grid-pagination',
+  selector: 'app-pagination',
   template: `
   <nav [hidden]="!isVisible">
   <ul class="pagination">
@@ -27,7 +27,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
     background-color: #027FF4;
     border-color: #027FF4;
   }
-  
+
   .pagination a {
       cursor: pointer;
   }
@@ -90,10 +90,14 @@ export class PaginationComponent implements OnInit {
 
   previousNext(direction: number, event?: MouseEvent) {
     let page: number = this.currentPage;
-    if (direction == -1) {
-      if (page > 1) page--;
+    if (direction === -1) {
+      if (page > 1) {
+        page--;
+      }
     } else {
-      if (page < this.totalPages) page++;
+      if (page < this.totalPages) {
+        page++;
+      }
     }
     this.changePage(page, event);
   }
@@ -102,7 +106,9 @@ export class PaginationComponent implements OnInit {
     if (event) {
       event.preventDefault();
     }
-    if (this.currentPage === page) return;
+    if (this.currentPage === page) {
+      return;
+    }
     this.currentPage = page;
     this.previousEnabled = this.currentPage > 1;
     this.nextEnabled = this.currentPage < this.totalPages;

@@ -427,7 +427,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>grid-pagination</code></td>
+                <td class="col-md-9"><code>app-pagination</code></td>
             </tr>
 
 
@@ -438,7 +438,7 @@
     background-color: #027FF4;
     border-color: #027FF4;
   }
-  
+
   .pagination a {
       cursor: pointer;
   }
@@ -673,7 +673,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/grid-pagination.component.ts:101</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/grid-pagination.component.ts:105</a></div>
                                 </td>
                             </tr>
     
@@ -1039,7 +1039,7 @@
         <pre class="line-numbers"><code class="language-typescript">import { Component, OnInit, Input, Output, EventEmitter } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;grid-pagination&#x27;,
+  selector: &#x27;app-pagination&#x27;,
   template: &#x60;
   &lt;nav [hidden]&#x3D;&quot;!isVisible&quot;&gt;
   &lt;ul class&#x3D;&quot;pagination&quot;&gt;
@@ -1065,7 +1065,7 @@
     background-color: #027FF4;
     border-color: #027FF4;
   }
-  
+
   .pagination a {
       cursor: pointer;
   }
@@ -1128,10 +1128,14 @@ export class PaginationComponent implements OnInit {
 
   previousNext(direction: number, event?: MouseEvent) {
     let page: number &#x3D; this.currentPage;
-    if (direction &#x3D;&#x3D; -1) {
-      if (page &gt; 1) page--;
+    if (direction &#x3D;&#x3D;&#x3D; -1) {
+      if (page &gt; 1) {
+        page--;
+      }
     } else {
-      if (page &lt; this.totalPages) page++;
+      if (page &lt; this.totalPages) {
+        page++;
+      }
     }
     this.changePage(page, event);
   }
@@ -1140,7 +1144,9 @@ export class PaginationComponent implements OnInit {
     if (event) {
       event.preventDefault();
     }
-    if (this.currentPage &#x3D;&#x3D;&#x3D; page) return;
+    if (this.currentPage &#x3D;&#x3D;&#x3D; page) {
+      return;
+    }
     this.currentPage &#x3D; page;
     this.previousEnabled &#x3D; this.currentPage &gt; 1;
     this.nextEnabled &#x3D; this.currentPage &lt; this.totalPages;
@@ -1175,7 +1181,7 @@ export class PaginationComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div>  <nav [hidden]="!isVisible">  <ul class="pagination">    <li [class.disabled]="!previousEnabled" (click)="previousNext(-1, $event)">      <a aria-label="Previous">        <span aria-hidden="true">&laquo;</span>      </a>    </li>    <li *ngFor="let page of pages" (click)="changePage(page, $event)" [class.active]="currentPage === page">      <a>{{ page }}</a>    </li>    <li [class.disabled]="!nextEnabled" (click)="previousNext(1, $event)">      <a aria-label="Next">        <span aria-hidden="true">&raquo;</span>      </a>    </li>  </ul></nav></div>'
-    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'grid-header'},{'name': 'GridRowComponent', 'selector': 'grid-row'},{'name': 'PaginationComponent', 'selector': 'grid-pagination'}];
+    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'app-header'},{'name': 'GridRowComponent', 'selector': 'app-row'},{'name': 'PaginationComponent', 'selector': 'app-pagination'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'PaginationComponent'};
 </script>

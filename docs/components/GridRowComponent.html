@@ -427,7 +427,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>grid-row</code></td>
+                <td class="col-md-9"><code>app-row</code></td>
             </tr>
 
 
@@ -769,7 +769,7 @@ import { IEntity } from &#x27;./IEntity&#x27;;
 import { IGridRow } from &#x27;./IGridRow&#x27;;
 
 @Component({
-  selector: &#x27;grid-row&#x27;,
+  selector: &#x27;app-row&#x27;,
   template: &#x60;
   &lt;tbody *ngIf&#x3D;&quot;items&quot;&gt;
   &lt;tr *ngFor&#x3D;&quot;let item of items&quot;&gt;
@@ -848,7 +848,7 @@ export class GridRowComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div>  <tbody *ngIf="items">  <tr *ngFor="let item of items">      <td *ngFor="let col of item.columns" class="grid-cell">          <ng-template [ngIf]="col.type == \'ACTIONS\'">              <button type="button" (click)="editItem(item.entity, $event)" class="btn btn-primary btn-sm" data-hover="tooltip" title="Edit"><i class="fa fa-pencil"></i></button>              <button type="button" (click)="deleteItem(item.entity)" class="btn btn-danger btn-sm" data-hover="tooltip" title="Delete"><i class="fa fa-trash-o"></i></button>          </ng-template>          <ng-template [ngIf]="col.type == \'DATE\'">              {{col.value | date: \'dd/MM/yyyy\'}}          </ng-template>          <ng-template [ngIf]="col.type == \'CUSTOM\'">                  <span>{{col.value}}</span>              </ng-template>          <ng-template [ngIf]="col.type == undefined">              {{col.value}}          </ng-template>      </td>  </tr>  <tr *ngIf="!items.length">      <td>&nbsp;</td>      <td colspan="5">No Records Found</td>  </tr></tbody></div>'
-    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'grid-header'},{'name': 'GridRowComponent', 'selector': 'grid-row'},{'name': 'PaginationComponent', 'selector': 'grid-pagination'}];
+    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'app-demo-app'},{'name': 'GridComponent', 'selector': 'app-grid'},{'name': 'GridHeaderComponent', 'selector': 'app-header'},{'name': 'GridRowComponent', 'selector': 'app-row'},{'name': 'PaginationComponent', 'selector': 'app-pagination'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GridRowComponent'};
 </script>

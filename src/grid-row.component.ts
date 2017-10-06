@@ -3,7 +3,7 @@ import { IEntity } from './IEntity';
 import { IGridRow } from './IGridRow';
 
 @Component({
-  selector: 'grid-row',
+  selector: 'app-row',
   template: `
   <tbody *ngIf="items">
   <tr *ngFor="let item of items">
