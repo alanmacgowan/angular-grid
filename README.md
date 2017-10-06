@@ -1,7 +1,7 @@
 # angular grid [WIP]
 [![Build Status](https://travis-ci.org/alanmacgowan/angular-grid.svg?branch=master)](https://travis-ci.org/alanmacgowan/angular-grid)
 [![codecov](https://codecov.io/gh/alanmacgowan/angular-grid/branch/master/graph/badge.svg)](https://codecov.io/gh/alanmacgowan/angular-grid)
-[![npm version](https://badge.fury.io/js/angular-grid.svg)](http://badge.fury.io/js/angular-grid)
+[![npm version](https://badge.fury.io/js/angular-app-grid.svg)](http://badge.fury.io/js/angular-app-grid)
 [![devDependency Status](https://david-dm.org/alanmacgowan/angular-grid/dev-status.svg)](https://david-dm.org/alanmacgowan/angular-grid?type=dev)
 [![GitHub issues](https://img.shields.io/github/issues/alanmacgowan/angular-grid.svg)](https://github.com/alanmacgowan/angular-grid/issues)
 [![GitHub stars](https://img.shields.io/github/stars/alanmacgowan/angular-grid.svg)](https://github.com/alanmacgowan/angular-grid/stargazers)
@@ -26,14 +26,14 @@ basic grid for angular 2
 
 Install through npm:
 ```
-npm install --save angular-grid
+npm install --save angular-app-grid
 ```
 
 Then include in your apps module:
 
 ```typescript
 import { NgModule } from '@angular/core';
-import { AngularGridModule } from 'angular-grid';
+import { AngularGridModule } from 'angular-app-grid';
 
 @NgModule({
   imports: [
@@ -60,7 +60,55 @@ import { Component } from '@angular/core';
               (onPageChanged)="pageChanged($event)">
     </app-grid>`
 })
-export class MyComponent {}
+export class MyComponent {
+  totalRecords: number = 0;
+  pageSize: number = 5;
+  currentPage: number = 1;
+  currentSort: string = '_id';
+  currentSortOrder: number = 1;
+  columns: IGridColumn[] = [];
+  rows: IGridRow[] = [];
+
+  constructor() {}
+
+  pageChanged(page: number) {
+    this.currentPage = page;
+
+    //Call get data
+  }
+
+  getBData(page: number, sort: string, order?: number) {
+    this.rows = [];
+
+    //get data
+  }
+
+  sort(sort: ISortResult) {
+    this.currentSort = sort.column;
+    this.currentSortOrder = sort.order;
+
+   //Call get data
+  }
+
+  ngOnInit() {
+    //Call get data
+
+    //define grid columns
+    this.columns = [
+      { title: 'Action', name: '_id', type: 'ACTIONS' },
+      ...
+    ];
+  }
+
+  itemDelete(entity: IEntity) {
+    //implement delete functionality
+  }
+
+  itemEdit(entity: IEntity) {
+    //implement edit functionality
+  }
+
+}
 ```
 
 You may also find it useful to view the [demo source](https://github.com/alanmacgowan/angular-grid/blob/master/demo/demo.component.ts).

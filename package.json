@@ -1,5 +1,5 @@
 {
-  "name": "angular-grid",
+  "name": "angular-app-grid",
   "version": "0.0.0",
   "description": "basic grid for angular 2",
   "main": "./bundles/angular-grid.umd.js",
